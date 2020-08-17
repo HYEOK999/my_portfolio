@@ -1,0 +1,15 @@
+import React from "react";
+import styled from "styled-components";
+
+const Foot = styled.footer`
+  width: 100%;
+  height: 10rem;
+  background: pink;
+  color: black;
+`;
+
+function Body() {
+  return <Foot>이곳은 푸터입니다.</Foot>;
+}
+
+export default Body;
