@@ -1,15 +1,37 @@
 import React from "react";
 import styled from "styled-components";
+import { Route } from "react-router-dom";
+import Home from "./Home";
+import About from "./About";
+import Skills from "../head/Skills";
+import Project from "../head/Project";
 
 const BodyBlock = styled.body`
   width: 100%;
-  height: 55rem;
+  height: 100%;
   background: gray;
   color: black;
+  .back {
+    background: url(https://cdn.pixabay.com/photo/2015/05/15/09/29/apple-768022_1280.jpg)
+      no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 838px;
+    filter: brightness(50%);
+  }
 `;
 
-function Body() {
-  return <BodyBlock>이곳은 바디입니다.</BodyBlock>;
-}
+const Body = () => {
+  return (
+    <BodyBlock>
+      <div className="back">
+        <Route path="/" exact={true} component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/skills" component={Skills} />
+        <Route path="/project" component={Project} />
+      </div>
+    </BodyBlock>
+  );
+};
 
 export default Body;

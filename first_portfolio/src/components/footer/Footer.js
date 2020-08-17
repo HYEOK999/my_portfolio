@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Foot = styled.footer`
   width: 100%;
-  height: 10rem;
+  height: 100%;
   background: pink;
   color: black;
 `;

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const HeadText = styled.div`
   ul {
@@ -13,7 +14,7 @@ const HeadText = styled.div`
     padding: 1.5rem;
     border: 0;
     cursor: pointer;
-    opacity: 0.6;
+    opacity: 0.8;
     font-weight: 700;
   }
 
@@ -24,16 +25,29 @@ const HeadText = styled.div`
   li:hover {
     opacity: 2;
   }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
 `;
 
 function BlockItem() {
   return (
     <HeadText>
       <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Skills</li>
-        <li>Project</li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/skills">Skills</Link>
+        </li>
+        <li>
+          <Link to="/project">Project</Link>
+        </li>
         <li>Contact</li>
       </ul>
     </HeadText>

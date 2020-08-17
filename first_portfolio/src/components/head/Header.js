@@ -3,17 +3,18 @@ import styled from "styled-components";
 import BlockItem from "./BlockItem";
 
 const Head = styled.header`
-  width: 97vw;
+  width: 100%;
   height: 4rem;
   display: flex;
   justify-content: flex-end;
+  background: #000010;
 `;
 
 const HeadText = styled.div`
   width: 775px;
   height: 4rem;
   background: black;
-  color: #fff;
+  color: white;
   border-radius: 2px 2px 30px 30px;
   opacity: 0.7;
 `;
