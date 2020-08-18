@@ -9,8 +9,7 @@ import Project from "../head/Project";
 const BodyBlock = styled.body`
   width: 100%;
   height: 100%;
-  background: gray;
-  color: black;
+  background: black;
   .back {
     background: url(https://cdn.pixabay.com/photo/2015/05/15/09/29/apple-768022_1280.jpg)
       no-repeat center;
@@ -19,12 +18,20 @@ const BodyBlock = styled.body`
     height: 838px;
     filter: brightness(50%);
   }
+  .front {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 `;
 
 const Body = () => {
   return (
     <BodyBlock>
-      <div className="back">
+      <div className="back" />
+      <div className="front">
         <Route path="/" exact={true} component={Home} />
         <Route path="/about" component={About} />
         <Route path="/skills" component={Skills} />
