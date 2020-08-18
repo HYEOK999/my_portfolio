@@ -7,16 +7,26 @@ const HomeStyle = styled.span`
   align-items: center;
   color: white;
   height: 100%;
-  .Hello {
-    margin: 0;
-    font-size: 40px;
-  }
+`;
+const Hello = styled.div`
+  margin: 0;
+  font-size: 50px;
+  color: white;
+  display: none;
+  ${(props) =>
+    !props.open2 &&
+    css`
+      display: block;
+    `}
 `;
 const InputForm = styled.form`
   width: 50%;
   ${(props) =>
-    props.open &&
+    !props.open &&
     css`
+      .Hello {
+        color: red;
+      }
       display: none;
     `}
 `;
@@ -31,7 +41,8 @@ const InputNick = styled.input`
 `;
 
 function Home() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
+  const [open2, setOpen2] = useState(true);
   const [text, setText] = useState("");
 
   const onChange = (e) => {
@@ -39,8 +50,8 @@ function Home() {
   };
   const onSubmit = (e) => {
     e.preventDefault();
-    setText("");
-    setOpen(true);
+    setOpen2(false);
+    setOpen(false);
   };
 
   return (
@@ -53,7 +64,7 @@ function Home() {
           placeholder="닉네임 입력 후 Enter를 눌려주세요!"
         />
       </InputForm>
-      <div className="Hello">{text}</div>
+      <Hello open2={open2}>{text}&nbsp;님 안녕하세요!</Hello>
     </HomeStyle>
   );
 }
