@@ -14,6 +14,11 @@ const HomeStyle = styled.span`
 `;
 const InputForm = styled.form`
   width: 50%;
+  ${(props) =>
+    props.open &&
+    css`
+      display: none;
+    `}
 `;
 const InputNick = styled.input`
   padding: 12px;
@@ -23,19 +28,10 @@ const InputNick = styled.input`
   outline: none;
   font-size: 24px;
   box-sizing: border-box;
-
-  ${(props) =>
-    props.open &&
-    css`
-      background: #ff6b6b;
-      &:active {
-        background: #fa5252;
-      }
-    `}
 `;
 
 function Home() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [text, setText] = useState("");
 
   const onChange = (e) => {
@@ -44,7 +40,7 @@ function Home() {
   const onSubmit = (e) => {
     e.preventDefault();
     setText("");
-    setOpen(false);
+    setOpen(true);
   };
 
   return (
