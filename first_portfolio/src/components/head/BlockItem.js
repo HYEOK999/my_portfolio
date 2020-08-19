@@ -48,7 +48,9 @@ function BlockItem() {
         <li>
           <Link to="/project">Project</Link>
         </li>
-        <li>Contact</li>
+        <li>
+          <a href="#footer">Contact</a>
+        </li>
       </ul>
     </HeadText>
   );
