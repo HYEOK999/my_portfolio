@@ -6,7 +6,7 @@ import About from "./About";
 import Skills from "../head/Skills";
 import Project from "../head/Project";
 
-const BodyBlock = styled.body`
+const BodyBlock = styled.section`
   width: 100%;
   height: 100%;
   background: black;

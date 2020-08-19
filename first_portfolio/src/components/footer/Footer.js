@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import media from "styled-media-query";
 
 const Foot = styled.footer`
   width: 100%;
@@ -19,13 +20,23 @@ const Foot = styled.footer`
     border: 3px solid black;
     border-radius: 50%;
   }
+  ${media.lessThan("600px")`
+    padding: 20px 0;
+    .email {
+      font-size: 15px;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  `}
 `;
 
 function Body() {
   return (
     <Foot id="footer">
       Contact
-      <div class="email">Email: tnstnejddjfl@nave.com</div>
+      <div className="email">Email: tnstnejddjfl@nave.com</div>
       <a href="https://github.com/cjdtjr6rl">
         <img
           src="https://avatars3.githubusercontent.com/u/43205396?s=460&u=93e86c1b3ab399f2301e3a7d2c94280649c50a31&v=4"

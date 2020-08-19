@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
+import media from "styled-media-query";
 
 const HomeStyle = styled.span`
   display: flex;
@@ -10,7 +11,7 @@ const HomeStyle = styled.span`
 `;
 const Hello = styled.div`
   margin: 0;
-  font-size: 65px;
+  font-size: 6vw;
   font-weight: 500;
   color: white;
   display: none;
@@ -21,10 +22,15 @@ const Hello = styled.div`
       display: block;
     `}
   .customer {
-    font-size: 40px;
+    font-size: 4vw;
     font-weight: 400;
     margin-bottom: 30px;
   }
+  ${media.lessThan("750px")`
+    .customer {
+      margin-bottom: 20px;
+    }
+  `}
 `;
 const InputForm = styled.form`
   width: 50%;
@@ -45,6 +51,9 @@ const InputNick = styled.input`
   outline: none;
   font-size: 24px;
   box-sizing: border-box;
+  ${media.lessThan("medium")`
+    font-size: 18px;
+  `}
 `;
 
 function Home() {
@@ -72,7 +81,7 @@ function Home() {
         />
       </InputForm>
       <Hello open2={open2}>
-        <div class="customer">{text}&nbsp;님 안녕하세요!</div>
+        <div className="customer">{text}&nbsp;님 안녕하세요!</div>
         Developer 이준형의 포트폴리오입니다.
       </Hello>
     </HomeStyle>
