@@ -11,8 +11,7 @@ const HomeStyle = styled.span`
 `;
 const Hello = styled.div`
   margin: 0;
-  font-size: 6vw;
-  font-weight: 500;
+  font-size: 5vw;
   color: white;
   display: none;
   text-align: center;

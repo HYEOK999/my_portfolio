@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { Route } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
-import Skills from "../head/Skills";
-import Project from "../head/Project";
+import Skills from "./Skills";
+import Project from "./Project";
 
 const BodyBlock = styled.section`
   width: 100%;

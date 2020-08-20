@@ -36,7 +36,7 @@ function Body() {
   return (
     <Foot id="footer">
       Contact
-      <div className="email">Email: tnstnejddjfl@nave.com</div>
+      <div className="email">Email: tnstnejddjfl@naver.com</div>
       <a href="https://github.com/cjdtjr6rl">
         <img
           src="https://avatars3.githubusercontent.com/u/43205396?s=460&u=93e86c1b3ab399f2301e3a7d2c94280649c50a31&v=4"
