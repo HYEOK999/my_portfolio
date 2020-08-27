@@ -1,11 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import media from "styled-media-query";
 
 const HeadText = styled.div`
   ul {
     list-style: none;
     margin: 0;
+    ${media.lessThan("768px")`
+      display: none;
+    `}
   }
 
   li {

@@ -8,8 +8,21 @@ const Foot = styled.footer`
   background: white;
   color: black;
   text-align: center;
-  font-size: 40px;
+  font-size: 15px;
   padding: 40px 0;
+  h1 {
+    margin-block-start: 10px;
+  }
+  h1::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 30px;
+    right: 0px;
+    right: 50%;
+    border-bottom: 3px solid blue;
+    margin: 5px 0px;
+  }
   .email {
     padding: 20px 0;
     font-size: 30px;
@@ -35,7 +48,7 @@ const Foot = styled.footer`
 function Body() {
   return (
     <Foot id="footer">
-      Contact
+      <h1>Contact</h1>
       <div className="email">Email: tnstnejddjfl@naver.com</div>
       <a href="https://github.com/cjdtjr6rl">
         <img

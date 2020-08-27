@@ -7,30 +7,35 @@ import Skills from "./Skills";
 import Project from "./Project";
 
 const BodyBlock = styled.section`
-  width: 100%;
-  height: 100%;
-  background: black;
-  .back {
+  &::after {
+    width: 100%;
+    height: 100%;
+    content: "";
     background: url(https://cdn.pixabay.com/photo/2015/05/15/09/29/apple-768022_1280.jpg)
       no-repeat center;
     background-size: cover;
-    width: 100%;
-    height: 94vh;
+    position: absolute;
+    top: 0;
+    left: 0;
     filter: brightness(50%);
+    z-index: -1;
   }
+  z-index: 1;
+  background-size: cover;
+  width: 100%;
+  height: 94vh;
   .front {
     width: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
 const Body = () => {
   return (
     <BodyBlock>
-      <div className="back" />
       <div className="front">
         <Route path="/" exact={true} component={Home} />
         <Route path="/about" component={About} />

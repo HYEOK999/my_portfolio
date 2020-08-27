@@ -8,6 +8,7 @@ const HomeStyle = styled.span`
   align-items: center;
   color: white;
   height: 100%;
+  width: 100%;
 `;
 const Hello = styled.div`
   margin: 0;
