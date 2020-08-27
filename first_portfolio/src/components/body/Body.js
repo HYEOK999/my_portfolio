@@ -15,7 +15,7 @@ const BodyBlock = styled.section`
       no-repeat center;
     background-size: cover;
     width: 100%;
-    height: 838px;
+    height: 94vh;
     filter: brightness(50%);
   }
   .front {
