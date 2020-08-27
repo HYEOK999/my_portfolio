@@ -5,6 +5,7 @@ import media from "styled-media-query";
 const SkillsStyle = styled.div`
   color: white;
   height: 100%;
+  padding: 13px 0;
 `;
 const Name = styled.nav`
   position: relative;

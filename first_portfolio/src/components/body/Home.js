@@ -7,7 +7,7 @@ const HomeStyle = styled.span`
   justify-content: center;
   align-items: center;
   color: white;
-  height: 100%;
+  height: 94vh;
   width: 100%;
 `;
 const Hello = styled.div`

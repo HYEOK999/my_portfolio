@@ -11,7 +11,7 @@ const AboutStyle = styled.div`
 
 const MyImage = styled.nav`
   width: 30%;
-  height: 500px;
+  height: 94vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +25,6 @@ const MyImage = styled.nav`
 `;
 const MySentence = styled.section`
   width: 70%;
-  height: 500px;
   text-align: left;
   font-size: 1.9vw;
   padding-right: 30px;
@@ -53,7 +52,7 @@ const MySentence = styled.section`
   }
   ${media.lessThan("1030px")`
     width: 100%;
-    padding: 0 50px;
+    padding: 50px 50px;
     font-size: 3vw;
     span {
       b {

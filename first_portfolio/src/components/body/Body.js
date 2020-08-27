@@ -23,10 +23,8 @@ const BodyBlock = styled.section`
   z-index: 1;
   background-size: cover;
   width: 100%;
-  height: 94vh;
+  height: 100%;
   .front {
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
