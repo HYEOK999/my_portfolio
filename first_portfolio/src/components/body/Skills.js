@@ -26,6 +26,9 @@ const Name = styled.nav`
     border-bottom: 3px solid red;
     margin: 5px 0px;
   }
+  ${media.lessThan("650px")`
+    font-size: 20px;
+  `}
 `;
 
 const Skill = styled.section`
@@ -38,9 +41,6 @@ const Skill = styled.section`
     justify-content: center;
     align-items: center;
     padding-bottom: 20px;
-  }
-  .title:first-child {
-    padding-top: 20px;
   }
   .chart {
     display: flex;
@@ -100,10 +100,10 @@ const Skill = styled.section`
 function Skills() {
   return (
     <SkillsStyle>
+      <Name>
+        <h1>Skills</h1>
+      </Name>
       <Skill>
-        <Name>
-          <h1>Skills</h1>
-        </Name>
         <div className="title">Language</div>
         <div className="chart">
           <span>

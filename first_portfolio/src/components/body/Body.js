@@ -9,7 +9,7 @@ import Project from "./Project";
 const BodyBlock = styled.section`
   &::after {
     width: 100%;
-    height: 100%;
+    height: 1000px;
     content: "";
     background: url(https://cdn.pixabay.com/photo/2015/05/15/09/29/apple-768022_1280.jpg)
       no-repeat center;

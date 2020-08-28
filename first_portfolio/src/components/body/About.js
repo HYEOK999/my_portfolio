@@ -7,6 +7,7 @@ const AboutStyle = styled.div`
   justify-content: center;
   align-items: center;
   color: white;
+  padding: 0 80px;
 `;
 
 const MyImage = styled.nav`
@@ -26,7 +27,7 @@ const MyImage = styled.nav`
 const MySentence = styled.section`
   width: 70%;
   text-align: left;
-  font-size: 1.9vw;
+  font-size: 25px;
   padding-right: 30px;
   h1 {
     margin-block-start: 0;
@@ -43,7 +44,7 @@ const MySentence = styled.section`
     b {
       display: block;
       padding: 20px 0 40px;
-      font-size: 2vw;
+      font-size: 1.7vw;
       text-align: center;
     }
   }
