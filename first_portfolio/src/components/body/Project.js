@@ -30,29 +30,62 @@ const Name = styled.nav`
 
 const Projects = styled.section`
   padding: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
+  article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const ProjectItem = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
   float: left;
   width: 40%;
   height: 350px;
-  border: 1px solid white;
-  margin: 10px 9% 0 0;
+  margin: 32px 9% 0 0;
   img {
-    width: 40%;
+    width: 100%;
+    border-radius: 20px;
   }
   .content {
-    width: 60%;
-    border-left: 1px solid black;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+    .project_title {
+      display: none;
+    }
+    .project_content {
+      display: none;
+    }
+    button {
+      display: none;
+    }
   }
   &:nth-child(2n) {
     margin-right: 0;
+  }
+  &:hover {
+    .content {
+      width: 80%;
+    }
+    .project_title {
+      display: block;
+    }
+    .project_content {
+      display: block;
+    }
+    button {
+      display: block;
+    }
   }
 `;
 
@@ -63,22 +96,45 @@ function Project() {
         <h1>Project</h1>
       </Name>
       <Projects>
-        <ProjectItem>
-          <img src={require("../../image/schoolware1.png")} alt="schoolware" />
-          <div className="content">프로젝트1 설명</div>
-        </ProjectItem>
-        <ProjectItem>
-          <img src={require("../../image/nalab_main.png")} alt="nalab_main" />
-          <div className="content">프로젝트2 설명</div>
-        </ProjectItem>
-        <ProjectItem>
-          <img src={require("../../image/c.png")} alt="c" />
-          <div className="content">프로젝트3 설명</div>
-        </ProjectItem>
-        <ProjectItem>
-          <img src={require("../../image/c.png")} alt="c" />
-          <div className="content">프로젝트4 설명</div>
-        </ProjectItem>
+        <article>
+          <ProjectItem>
+            <img
+              src={require("../../image/schoolware1.png")}
+              alt="schoolware"
+            />
+            <div className="content">
+              <div className="project_title">프로젝트1 제목</div>
+              <div className="project_content">프로젝트1 내용</div>
+              <button>더보기</button>
+            </div>
+          </ProjectItem>
+          <ProjectItem>
+            <img src={require("../../image/nalab_main.png")} alt="nalab_main" />
+            <div className="content">
+              <div className="project_title">프로젝트2 제목</div>
+              <div className="project_content">프로젝트2 내용</div>
+              <button>더보기</button>
+            </div>{" "}
+          </ProjectItem>
+        </article>
+        <article>
+          <ProjectItem>
+            <img src={require("../../image/nalab_main.png")} alt="nalab_main" />
+            <div className="content">
+              <div className="project_title">프로젝트3 제목</div>
+              <div className="project_content">프로젝트3 내용</div>
+              <button>더보기</button>
+            </div>{" "}
+          </ProjectItem>
+          <ProjectItem>
+            <img src={require("../../image/nalab_main.png")} alt="nalab_main" />
+            <div className="content">
+              <div className="project_title">프로젝트4 제목</div>
+              <div className="project_content">프로젝트4 내용</div>
+              <button>더보기</button>
+            </div>{" "}
+          </ProjectItem>
+        </article>
       </Projects>
     </ProjectStyle>
   );
