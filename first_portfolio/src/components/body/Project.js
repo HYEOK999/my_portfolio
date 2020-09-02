@@ -62,11 +62,15 @@ const ProjectItem = styled.div`
     transition: all 0.4s ease;
     .project_title {
       display: none;
+      font-size: 30px;
+      margin: 30px;
     }
     .project_content {
       display: none;
+      font-size: 20px;
+      margin: 20px;
     }
-    button {
+    .myButton {
       display: none;
     }
   }
@@ -75,7 +79,7 @@ const ProjectItem = styled.div`
   }
   &:hover {
     .content {
-      width: 80%;
+      width: 60%;
     }
     .project_title {
       display: block;
@@ -83,8 +87,29 @@ const ProjectItem = styled.div`
     .project_content {
       display: block;
     }
-    button {
+    .myButton {
       display: block;
+      box-shadow: 3px 4px 0px 0px #899599;
+      background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+      background-color: #ededed;
+      border-radius: 15px;
+      border: 1px solid #d6bcd6;
+      display: inline-block;
+      cursor: pointer;
+      color: black;
+      font-family: Arial;
+      font-size: 17px;
+      padding: 7px 25px;
+      text-decoration: none;
+      text-shadow: 0px 1px 0px #e1e2ed;
+    }
+    .myButton:hover {
+      background: linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+      background-color: #bab1ba;
+    }
+    .myButton:active {
+      position: relative;
+      top: 1px;
     }
   }
 `;
@@ -103,35 +128,39 @@ function Project() {
               alt="schoolware"
             />
             <div className="content">
-              <div className="project_title">프로젝트1 제목</div>
-              <div className="project_content">프로젝트1 내용</div>
-              <button>더보기</button>
+              <div className="project_title">Schoolware</div>
+              <div className="project_content">LMS 서비스 플랫폼입니다.</div>
+              <button className="myButton">더보기</button>
             </div>
           </ProjectItem>
           <ProjectItem>
             <img src={require("../../image/nalab_main.png")} alt="nalab_main" />
             <div className="content">
-              <div className="project_title">프로젝트2 제목</div>
-              <div className="project_content">프로젝트2 내용</div>
-              <button>더보기</button>
+              <div className="project_title">NaLab</div>
+              <div className="project_content">
+                Lab 과목 서비스 플렛폼입니다.
+              </div>
+              <button className="myButton">더보기</button>
             </div>{" "}
           </ProjectItem>
         </article>
         <article>
           <ProjectItem>
-            <img src={require("../../image/nalab_main.png")} alt="nalab_main" />
+            <img src={require("../../image/blockchain.png")} alt="blockchain" />
             <div className="content">
-              <div className="project_title">프로젝트3 제목</div>
-              <div className="project_content">프로젝트3 내용</div>
-              <button>더보기</button>
+              <div className="project_title">농산물 거래 플랫폼</div>
+              <div className="project_content">
+                블록체인을 활용한 농산물 거래 플랫폼
+              </div>
+              <button className="myButton">더보기</button>
             </div>{" "}
           </ProjectItem>
           <ProjectItem>
-            <img src={require("../../image/nalab_main.png")} alt="nalab_main" />
+            <img src={require("../../image/us_house.png")} alt="us_house" />
             <div className="content">
-              <div className="project_title">프로젝트4 제목</div>
-              <div className="project_content">프로젝트4 내용</div>
-              <button>더보기</button>
+              <div className="project_title">우리의 집</div>
+              <div className="project_content">기업분석콘테스트 출품작</div>
+              <button className="myButton">더보기</button>
             </div>{" "}
           </ProjectItem>
         </article>
