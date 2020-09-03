@@ -13,16 +13,6 @@ const Foot = styled.footer`
   h1 {
     margin-block-start: 10px;
   }
-  h1::after {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 30px;
-    right: 0px;
-    right: 50%;
-    border-bottom: 3px solid blue;
-    margin: 5px 0px;
-  }
   .email {
     padding: 20px 0;
     font-size: 30px;

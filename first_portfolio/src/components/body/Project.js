@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import Modal from "./Modal";
 
 const ProjectStyle = styled.div`
   color: white;
@@ -59,7 +60,7 @@ const ProjectItem = styled.div`
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     text-align: center;
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
     .project_title {
       display: none;
       font-size: 30px;
@@ -98,7 +99,7 @@ const ProjectItem = styled.div`
       cursor: pointer;
       color: black;
       font-family: Arial;
-      font-size: 17px;
+      font-size: 13px;
       padding: 7px 25px;
       text-decoration: none;
       text-shadow: 0px 1px 0px #e1e2ed;
@@ -114,7 +115,55 @@ const ProjectItem = styled.div`
   }
 `;
 
+const Proimg = styled.div`
+  float: left;
+  display: inline-block;
+  width: 59%;
+  img {
+    width: 100%;
+  }
+  video {
+    width: 100%;
+  }
+`;
+const Prosen = styled.div`
+  display: inline;
+`;
+
 function Project() {
+  const [dialog, setDialog] = useState(false);
+  const onClick = () => {
+    setDialog(true);
+  };
+  const [dialog2, setDialog2] = useState(false);
+  const onClick2 = () => {
+    setDialog2(true);
+  };
+  const [dialog3, setDialog3] = useState(false);
+  const onClick3 = () => {
+    setDialog3(true);
+  };
+  const [dialog4, setDialog4] = useState(false);
+  const onClick4 = () => {
+    setDialog4(true);
+  };
+  const onCancel = () => {
+    console.log("취소");
+    setDialog(false);
+  };
+  const onCancel2 = () => {
+    console.log("취소");
+    setDialog2(false);
+  };
+  const onCancel3 = () => {
+    console.log("취소");
+    setDialog3(false);
+  };
+  const onCancel4 = () => {
+    console.log("취소");
+    setDialog4(false);
+  };
+
   return (
     <ProjectStyle>
       <Name>
@@ -130,7 +179,9 @@ function Project() {
             <div className="content">
               <div className="project_title">Schoolware</div>
               <div className="project_content">LMS 서비스 플랫폼입니다.</div>
-              <button className="myButton">더보기</button>
+              <button className="myButton" onClick={onClick}>
+                더보기
+              </button>
             </div>
           </ProjectItem>
           <ProjectItem>
@@ -140,8 +191,10 @@ function Project() {
               <div className="project_content">
                 Lab 과목 서비스 플렛폼입니다.
               </div>
-              <button className="myButton">더보기</button>
-            </div>{" "}
+              <button className="myButton" onClick={onClick2}>
+                더보기
+              </button>
+            </div>
           </ProjectItem>
         </article>
         <article>
@@ -152,19 +205,91 @@ function Project() {
               <div className="project_content">
                 블록체인을 활용한 농산물 거래 플랫폼
               </div>
-              <button className="myButton">더보기</button>
-            </div>{" "}
+              <button className="myButton" onClick={onClick3}>
+                더보기
+              </button>
+            </div>
           </ProjectItem>
           <ProjectItem>
             <img src={require("../../image/us_house.png")} alt="us_house" />
             <div className="content">
               <div className="project_title">우리의 집</div>
               <div className="project_content">기업분석콘테스트 출품작</div>
-              <button className="myButton">더보기</button>
-            </div>{" "}
+              <button className="myButton" onClick={onClick4}>
+                더보기
+              </button>
+            </div>
           </ProjectItem>
         </article>
       </Projects>
+      <Modal
+        title="Schoolware"
+        cancelText="닫기"
+        onCancel={onCancel}
+        visible={dialog}
+      >
+        <Proimg>
+          <img src={require("../../image/schoolware2.png")} alt="schoolware2" />
+        </Proimg>
+        <Prosen>
+          2015년부터 제작 되어진 LMS 서비스 플랫폼입니다. 나사렛대학교
+          IT융합학부 등 여러 학과에서 사용중이며 총 회원 수 2000명 이상을
+          보유하고 있습니다. 학년, 수업별로 방을 생성할 수 있으며, 과제 제출,
+          출석 등 여러 서비스를 권한별로 이용할 수 있습니다.
+        </Prosen>
+      </Modal>
+      <Modal
+        title="NaLab"
+        cancelText="닫기"
+        onCancel={onCancel2}
+        visible={dialog2}
+      >
+        <Proimg>
+          <img src={require("../../image/nalab2.png")} alt="nalab2" />
+        </Proimg>
+        <Prosen>
+          나사렛대학교 IT융합학부에서 Lab이라는 과목을 생성하여 그에 맞게
+          동아리에서 제작하였습니다. 학년 구분 없이 Lab단위로 인원을 구성
+          가능하며 Lab안에서 팀으로도 구성이 가능합니다. 관리자가 교수에게
+          Lab지원금을 배정해주면 그에 맞게 교수도 학생이 포함된 팀에게 지원금을
+          나누어주어 물품 구매도 가능합니다.
+        </Prosen>
+      </Modal>
+      <Modal
+        title="농산물 거래 플랫폼"
+        cancelText="닫기"
+        onCancel={onCancel3}
+        visible={dialog3}
+      >
+        <Proimg>
+          <video controls autoplay loop>
+            <source src={require("../../image/seller.mp4")} type="video/mp4" />
+            IE 8 이하는 비디오가 나오지 않습니다. IE 버전을 업데이트 하시길
+            바랍니다.
+          </video>
+        </Proimg>
+        <Prosen>
+          농산물 거래를 웹페이지로 구축을 하며, 프라이빗 블록체인으로 거래를
+          하는 원장을 저장하여 보안상으로도 안정적이게 구축하였습니다.
+        </Prosen>
+      </Modal>
+      <Modal
+        title="우리의 집"
+        cancelText="닫기"
+        onCancel={onCancel4}
+        visible={dialog4}
+      >
+        <Proimg>
+          <img src={require("../../image/us_house.png")} alt="us_house" />
+        </Proimg>
+        <Prosen>
+          학교에서 주최하는 기업분석콘테스트에 참가하여 구축을 하였습니다. 현재
+          내가 무엇을 공부하고 어떤 분야에서 공부를 하는지 표현하기
+          위하였습니다. index 페이지는 현재 '오늘의 집'이라는 기업을 카피하여
+          거의 동일하게 만들었으며 다른 페이지는 팀의 소개를 나타내는 페이지를
+          구축하였습니다.
+        </Prosen>
+      </Modal>
     </ProjectStyle>
   );
 }
