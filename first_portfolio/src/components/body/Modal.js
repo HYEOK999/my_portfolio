@@ -62,7 +62,7 @@ const DarkBackground = styled.div`
 
 const DialogBlock = styled.div`
   width: 70%;
-  height: 75%;
+  height: 65%;
   overflow: hidden;
   overflow-y: auto;
   background: white;
@@ -90,9 +90,13 @@ const DialogBlock = styled.div`
 `;
 
 const ButtonGroup = styled.div`
-  margin-top: 3rem;
   display: flex;
   justify-content: flex-end;
+  button {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+  }
 `;
 
 function Modal({ title, children, cancelText, onCancel, visible }) {
@@ -113,6 +117,7 @@ function Modal({ title, children, cancelText, onCancel, visible }) {
     <DarkBackground disappear={!visible}>
       <DialogBlock disappear={!visible}>
         <h3>{title}</h3>
+        <hr />
         <span>{children}</span>
         <ButtonGroup>
           <button onClick={onCancel}>{cancelText}</button>
