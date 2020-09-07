@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import BlockItem from "./BlockItem";
+import SmallItem from "./SmallItem";
 
 const Head = styled.header`
   width: 100%;
@@ -24,6 +25,7 @@ function Header() {
     <>
       <Head>
         <HeadText>
+          <SmallItem />
           <BlockItem />
         </HeadText>
       </Head>
