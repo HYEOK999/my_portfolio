@@ -25,7 +25,7 @@ const Mnav = styled.nav`
     .bar:before,
     .bar:after,
     .bar {
-      width: 23px;
+      width: 24px;
       height: 2px;
       background: white;
       display: block;
