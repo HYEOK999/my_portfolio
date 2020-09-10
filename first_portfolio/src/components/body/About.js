@@ -8,6 +8,9 @@ const AboutStyle = styled.div`
   align-items: center;
   color: white;
   padding: 0 80px;
+  ${media.lessThan("635px")`
+    padding: 0 30px;
+  `}
 `;
 
 const MyImage = styled.nav`
@@ -50,6 +53,9 @@ const MySentence = styled.section`
   }
   .in {
     line-height: 35px;
+    ${media.lessThan("500px")`
+      line-height: 25px;
+    `}
   }
   ${media.lessThan("1030px")`
     width: 100%;
@@ -63,6 +69,9 @@ const MySentence = styled.section`
         font-size: 2.5vw;
       }
     }
+  `}
+  ${media.lessThan("768px")`
+    padding: 50px 0;
   `}
 `;
 

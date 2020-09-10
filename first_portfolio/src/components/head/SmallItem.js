@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import media from "styled-media-query";
+import { Link } from "react-router-dom";
 
 const Mnav = styled.nav`
   display: none;
-  position: absolute;
-  top: 6px;
-  left: 14px;
-  padding: 10px 0;
-  z-index: 2;
+  button {
+    position: absolute;
+    top: 15px;
+    left: 14px;
+    padding: 10px 0;
+    z-index: 2;
+  }
   .close {
     padding: 15px 8.5px;
     background: black;
@@ -83,12 +86,69 @@ const Mnav = styled.nav`
     `}
 `;
 
+const HeadText = styled.div`
+  z-index: 999;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding-inline-start: 0;
+    padding-top: 13px;
+  }
+
+  li {
+    margin-right: 3rem;
+    padding: 10px;
+    border: 0;
+    cursor: pointer;
+    opacity: 0.8;
+    font-weight: 700;
+  }
+
+  li:last-child {
+    margin-right: 0;
+  }
+
+  li:hover {
+    opacity: 2;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+`;
+
 function SmallItem() {
+  const [open, setOpen] = useState(false);
+  const onToggle = () => setOpen(!open);
+
   return (
     <Mnav>
-      <button class="close">
-        <span class="bar"></span>
+      <button className="close" onClick={onToggle} open={open}>
+        <span className="bar"></span>
       </button>
+      {open && (
+        <HeadText>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/skills">Skills</Link>
+            </li>
+            <li>
+              <Link to="/project">Project</Link>
+            </li>
+            <li>
+              <a href="#footer">Contact</a>
+            </li>
+          </ul>
+        </HeadText>
+      )}
     </Mnav>
   );
 }

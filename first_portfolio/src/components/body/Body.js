@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import media from "styled-media-query";
 import { Route } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
@@ -19,6 +20,9 @@ const BodyBlock = styled.section`
     left: 0;
     filter: brightness(50%);
     z-index: -1;
+    ${media.lessThan("500px")`
+      height: 100%;
+    `}
   }
   z-index: 1;
   background-size: cover;

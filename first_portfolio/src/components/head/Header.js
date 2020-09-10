@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import BlockItem from "./BlockItem";
 import SmallItem from "./SmallItem";
+import media from "styled-media-query";
 
 const Head = styled.header`
   width: 100%;
@@ -9,6 +10,9 @@ const Head = styled.header`
   display: flex;
   justify-content: flex-end;
   background: #000010;
+  /* ${media.lessThan("768px")`
+        height: 16rem;
+    `} */
 `;
 
 const HeadText = styled.div`
