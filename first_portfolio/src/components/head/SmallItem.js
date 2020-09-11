@@ -82,8 +82,8 @@ const Mnav = styled.nav`
     }
   }
   ${media.lessThan("768px")`
-        display: block;
-    `}
+      display: block;
+  `}
 `;
 
 const HeadText = styled.div`
@@ -94,6 +94,10 @@ const HeadText = styled.div`
     margin: 0;
     padding-inline-start: 0;
     padding-top: 13px;
+    ${media.lessThan("768px")`
+      text-align: center;
+      padding-top: 55px;
+    `}
   }
 
   li {
@@ -103,6 +107,9 @@ const HeadText = styled.div`
     cursor: pointer;
     opacity: 0.8;
     font-weight: 700;
+    ${media.lessThan("768px")`
+      margin-right: 0;
+    `}
   }
 
   li:last-child {

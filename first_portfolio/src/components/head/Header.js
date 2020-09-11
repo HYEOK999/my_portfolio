@@ -10,9 +10,10 @@ const Head = styled.header`
   display: flex;
   justify-content: flex-end;
   background: #000010;
-  /* ${media.lessThan("768px")`
-        height: 16rem;
-    `} */
+  transition: 1s ease all;
+  ${media.lessThan("768px")`
+      height: 16rem;
+  `};
 `;
 
 const HeadText = styled.div`
