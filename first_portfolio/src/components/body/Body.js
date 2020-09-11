@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import media from "styled-media-query";
 import { Route } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
@@ -10,7 +9,7 @@ import Project from "./Project";
 const BodyBlock = styled.section`
   &::after {
     width: 100%;
-    height: 1000px;
+    height: 75rem;
     content: "";
     background: url(https://cdn.pixabay.com/photo/2015/05/15/09/29/apple-768022_1280.jpg)
       no-repeat center;
@@ -20,9 +19,6 @@ const BodyBlock = styled.section`
     left: 0;
     filter: brightness(50%);
     z-index: -1;
-    ${media.lessThan("500px")`
-      height: 100%;
-    `}
   }
   z-index: 1;
   background-size: cover;
