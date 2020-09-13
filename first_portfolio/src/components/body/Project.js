@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import media from "styled-media-query";
 import Modal from "./Modal";
 
 const ProjectStyle = styled.div`
@@ -65,6 +66,9 @@ const ProjectItem = styled.div`
       display: none;
       font-size: 30px;
       margin: 30px;
+      ${media.lessThan("768px")`
+          font-size: 20px;
+      `};
     }
     .project_content {
       display: none;
@@ -87,6 +91,9 @@ const ProjectItem = styled.div`
     }
     .project_content {
       display: block;
+      ${media.lessThan("768px")`
+          display: none;
+      `};
     }
     .myButton {
       display: block;
@@ -113,6 +120,9 @@ const ProjectItem = styled.div`
       top: 1px;
     }
   }
+  ${media.lessThan("768px")`
+      height: 150px;
+  `};
 `;
 
 const Proimg = styled.div`
