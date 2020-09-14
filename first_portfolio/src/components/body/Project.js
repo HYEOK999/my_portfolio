@@ -67,7 +67,11 @@ const ProjectItem = styled.div`
       font-size: 30px;
       margin: 30px;
       ${media.lessThan("768px")`
-          font-size: 20px;
+        font-size: 20px;
+        margin: 10px 5px;
+      `};
+      ${media.lessThan("375px")`
+        font-size: 14px;
       `};
     }
     .project_content {
@@ -110,6 +114,10 @@ const ProjectItem = styled.div`
       padding: 7px 25px;
       text-decoration: none;
       text-shadow: 0px 1px 0px #e1e2ed;
+      ${media.lessThan("375px")`
+        font-size: 10px;
+        padding: 7px 16px;
+      `};
     }
     .myButton:hover {
       background: linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
