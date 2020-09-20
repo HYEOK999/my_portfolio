@@ -264,7 +264,9 @@ function Project() {
             <img src={require("../../image/us_house.png")} alt="us_house" />
             <div className="content">
               <div className="project_title">우리의 집</div>
-              <div className="project_content">기업분석콘테스트 출품작</div>
+              <div className="project_content">
+                기업분석콘테스트 출품 웹페이지 작품
+              </div>
               <button className="myButton" onClick={onClick4}>
                 더보기
               </button>
