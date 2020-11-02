@@ -6,6 +6,7 @@ import media from "styled-media-query";
 
 const Head = styled.header`
   width: 100%;
+  text-align: center;
   height: 4rem;
   display: flex;
   justify-content: flex-end;

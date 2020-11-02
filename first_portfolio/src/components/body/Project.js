@@ -198,19 +198,15 @@ function Project() {
     setDialog4(true);
   };
   const onCancel = () => {
-    console.log("취소");
     setDialog(false);
   };
   const onCancel2 = () => {
-    console.log("취소");
     setDialog2(false);
   };
   const onCancel3 = () => {
-    console.log("취소");
     setDialog3(false);
   };
   const onCancel4 = () => {
-    console.log("취소");
     setDialog4(false);
   };
 
