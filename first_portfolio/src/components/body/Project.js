@@ -178,6 +178,12 @@ const Prosen = styled.div`
   .intro:last-child {
     margin-bottom: 0;
   }
+  .score {
+    font-size: 30px;
+    text-align: center;
+    padding: 40px 0;
+    color: red;
+  }
 `;
 
 function Project() {
@@ -358,6 +364,7 @@ function Project() {
             <div className="icon">#Spring</div>
             <div className="icon">#MySQL</div>
           </div>
+          <div className="score">🙌2021년 실서비스를 사용하여 나사렛대학교에서 1000만원으로 구매🙌</div>
         </Prosen>
       </Modal>
       <Modal
